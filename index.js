@@ -8,10 +8,10 @@ const dashboard = new ParseDashboard({
     apps: [
         {
             'serverURL': 'http://SERVER_URL:1337/parse',
-            'appId': 'lorienAnalyticsAppId',
-            'masterKey': 'lorienAnalyticsMasterKey',
-            'appName': 'Lorien Analytics',
-            'iconName': 'lorien.jpg'
+            'appId': 'yourAppId',
+            'masterKey': 'yourMasterKey',
+            'appName': 'APP_NAME',
+            'iconName': 'icon.jpg'
         }
     ],
     users: [
