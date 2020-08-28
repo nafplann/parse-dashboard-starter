@@ -2,12 +2,15 @@ const express = require('express');
 const ParseDashboard = require('parse-dashboard');
 const fs = require('fs');
 const port = 4040;
-const options = {};
+const os = require( 'os' );
+const networkInterfaces = os.networkInterfaces();
+const ipAddress = networkInterfaces['eth0'][0]['address'];
+const dbName = 'parse';
 
 const dashboard = new ParseDashboard({
     apps: [
         {
-            'serverURL': 'http://SERVER_URL:1337/parse',
+            'serverURL': `http://${ipAddress}:1337/${dbName}`,
             'appId': 'yourAppId',
             'masterKey': 'yourMasterKey',
             'appName': 'APP_NAME',
